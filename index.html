@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namaz Dawat Letter</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+.container{
+    background:#fff;
+    padding:20px;
+    width:90%;
+    max-width:500px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    font-size:16px;
+}
+button{
+    width:100%;
+    padding:10px;
+    background:#0a7a35;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+#letter{
+    margin-top:20px;
+    white-space:pre-line;
+    display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>Namaz Ki Dawat</h2>
+
+<input type="text" id="name" placeholder="Apna Naam Likhiye">
+
+<button onclick="showLetter()">Letter Dekhein</button>
+
+<div id="letter"></div>
+
+</div>
+
+<script>
+function showLetter(){
+
+let name=document.getElementById("name").value;
+
+if(name==""){
+alert("Pehle apna naam likhiye.");
+return;
+}
+
+document.getElementById("letter").style.display="block";
+
+document.getElementById("letter").innerHTML=`
+
+<b>Assalamu Alaikum Wa Rahmatullahi Wa Barakatuh</b>
+
+<b>Pyare ${name},</b>
+
+Allah Ta'ala ne Namaz ko har Musalman par farz kiya hai.
+
+Rasulullah ﷺ ne farmaya:
+
+"Qiyamat ke din sabse pehle Namaz ka hisaab liya jayega."
+
+Aaiye hum sab milkar Namaz ki pabandi karein aur Allah ki raza hasil karein.
+
+<b>JazakAllahu Khair.</b>
+
+`;
+
+}
+</script>
+
+</body>
+</html>
