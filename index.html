@@ -105,7 +105,33 @@ return;
 }
 
 document.getElementById("letter").style.display="block";
+const letters = [
+`<b>Assalamu Alaikum Wa Rahmatullahi Wa Barakatuh</b>
 
+<b>Pyare ${name},</b>
+
+Namaz momin ki pehchan hai. Aaiye aaj se har namaz waqt par ada karne ka irada karein.
+
+<b>JazakAllahu Khair.</b>`,
+
+`<b>Assalamu Alaikum Wa Rahmatullahi Wa Barakatuh</b>
+
+<b>Pyare ${name},</b>
+
+Quran ki tilawat dil ko sukoon deti hai. Rozana kuch ayat zaroor padhiye.
+
+<b>JazakAllahu Khair.</b>`,
+
+`<b>Assalamu Alaikum Wa Rahmatullahi Wa Barakatuh</b>
+
+<b>Pyare ${name},</b>
+
+Allah se dua aur sabr ke saath madad maangiye. Beshak Allah sabr karne walon ke saath hai.
+
+<b>JazakAllahu Khair.</b>`
+];
+
+const randomLetter = letters[Math.floor(Math.random() * letters.length)];
 document.getElementById("letter").innerHTML=`
 
 <b>Assalamu Alaikum Wa Rahmatullahi Wa Barakatuh</b>
