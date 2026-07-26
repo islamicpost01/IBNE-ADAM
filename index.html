@@ -65,11 +65,16 @@ Islamic Knowledge • Quran • Hadith • Namaz
 <input type="text" id="name" placeholder="Apna Naam Likhiye">
 
 <button onclick="showLetter()">Letter Dekhein</button>
-
+<button onclick="shareWhatsApp()" style="margin-top:10px;background:#25D366;">
+📲 WhatsApp Share
+</button>
 <div id="letter"></div>
 
 </div>
-
+function shareWhatsApp(){
+let text = "Assalamu Alaikum! IslamicPost par Namaz ki Dawat padhiye:\nhttps://islamicpost01.github.io/IBNE-ADAM/";
+window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
+}
 <script>
 function showLetter(){
 
