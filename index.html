@@ -94,63 +94,68 @@ let text = "Assalamu Alaikum! IslamicPost par Namaz ki Dawat padhiye:\nhttps://i
 window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
 }
 
-function showLetter(){
-function showLetter(){
+function showLetter() {
 
-let name=document.getElementById("name").value;
+let name = document.getElementById("name").value;
 
 if(name==""){
-alert("Pehle apna naam likhiye.");
-return;
+    alert("Pehle apna naam likhiye.");
+    return;
 }
 
-document.getElementById("letter").style.display="block";
+document.getElementById("letter").style.display = "block";
+
 const letters = [
-`<b>Assalamu Alaikum Wa Rahmatullahi Wa Barakatuh</b>
 
-<b>Pyare ${name},</b>
+`<b>Assalamu Alaikum Wa Rahmatullahi Wa Barakatuh</b><br><br>
 
-Namaz momin ki pehchan hai. Aaiye aaj se har namaz waqt par ada karne ka irada karein.
+<b>Pyare ${name},</b><br><br>
 
-<b>JazakAllahu Khair.</b>`,
-
-`<b>Assalamu Alaikum Wa Rahmatullahi Wa Barakatuh</b>
-
-<b>Pyare ${name},</b>
-
-Quran ki tilawat dil ko sukoon deti hai. Rozana kuch ayat zaroor padhiye.
+Namaz momin ki pehchan hai. Aaiye aaj se har namaz waqt par ada karne ka irada karein.<br><br>
 
 <b>JazakAllahu Khair.</b>`,
 
-`<b>Assalamu Alaikum Wa Rahmatullahi Wa Barakatuh</b>
+`<b>Assalamu Alaikum Wa Rahmatullahi Wa Barakatuh</b><br><br>
 
-<b>Pyare ${name},</b>
+<b>Pyare ${name},</b><br><br>
 
-Allah se dua aur sabr ke saath madad maangiye. Beshak Allah sabr karne walon ke saath hai.
+Quran ki tilawat dil ko sukoon deti hai. Rozana kuch ayat zaroor padhiye.<br><br>
+
+<b>JazakAllahu Khair.</b>`,
+
+`<b>Assalamu Alaikum Wa Rahmatullahi Wa Barakatuh</b><br><br>
+
+<b>Pyare ${name},</b><br><br>
+
+Allah se dua aur sabr ke saath madad maangiye. Beshak Allah sabr karne walon ke saath hai.<br><br>
+
+<b>JazakAllahu Khair.</b>`,
+
+`<b>Assalamu Alaikum Wa Rahmatullahi Wa Barakatuh</b><br><br>
+
+<b>Pyare ${name},</b><br><br>
+
+Rasulullah ﷺ ne farmaya: "Tum mein sabse behtar woh hai jo Quran seekhe aur sikhaye."<br><br>
+
+<b>JazakAllahu Khair.</b>`,
+
+`<b>Assalamu Alaikum Wa Rahmatullahi Wa Barakatuh</b><br><br>
+
+<b>Pyare ${name},</b><br><br>
+
+Har din Allah ka shukr ada kijiye aur apni namazon ki hifazat kijiye.<br><br>
 
 <b>JazakAllahu Khair.</b>`
+
 ];
 
 const randomLetter = letters[Math.floor(Math.random() * letters.length)];
-document.getElementById("letter").innerHTML=`
 
-<b>Assalamu Alaikum Wa Rahmatullahi Wa Barakatuh</b>
-
-<b>Pyare ${name},</b>
-
-Allah Ta'ala ne Namaz ko har Musalman par farz kiya hai.
-
-Rasulullah ﷺ ne farmaya:
-
-"Qiyamat ke din sabse pehle Namaz ka hisaab liya jayega."
-
-Aaiye hum sab milkar Namaz ki pabandi karein aur Allah ki raza hasil karein.
-
-<b>JazakAllahu Khair.</b>
-
-`;
+document.getElementById("letter").innerHTML = randomLetter;
 
 }
+
+
 </script>
 <footer style="text-align:center;padding:20px;margin-top:30px;background:#0a7a35;color:white;">
 <p>© 2026 IslamicPost. All Rights Reserved.</p>
